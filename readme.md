@@ -18,3 +18,16 @@ con ello, permitimos el uso de import y export en JS
     "type": "module"
 }
 ```
+
+``` bash
+npm i bcrypt
+```
+``` text
+creamos modelo
+```
+``` text
+creamos controlador
+```
+``` text
+creamos la ruta
+```

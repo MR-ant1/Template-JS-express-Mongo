@@ -2,7 +2,7 @@
 import express from "express"
 import 'dotenv/config'
 import { dbConnection } from "./database/db.js";
-import router from "./routes/auth.routes.js";
+import router from "./routes/router.js";
 
 const app = express()
 
@@ -23,12 +23,12 @@ app.use('/api', router)
 
 
 dbConnection()
-.then(() => {
-    console.log("Database Connected")
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`)
+    .then(() => {
+        console.log("Database Connected")
+        app.listen(PORT, () => {
+            console.log(`Server running on port ${PORT}`)
+        })
     })
-})
-.catch(error => {
-    console.log(error)
-})
+    .catch(error => {
+        console.log(error)
+    })
